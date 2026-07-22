@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Windows Calculator Standard Mode">
-    <title>Calculator</title>
+    <meta name="description" content="الحاسبة الذكية - منظومة إنجز للإنتاجية والحلول البرمجية">
+    <title>الحاسبة الذكية - منظومة إنجز (ENGZ Calculator)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
     <div class="calculator">
         <!-- Top Bar -->
         <div class="calc-top-bar">
             <div class="menu-title">
-                
-                <span class="calc-type" id="calcType">Standard</span>
+                <span class="brand-badge"><i class="fa-solid fa-bolt"></i> إنجز</span>
+                <span class="calc-type" id="calcType">الحاسبة القياسية</span>
             </div>
             <div class="top-actions">
                 <button class="icon-btn lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Language / الترجمة">🌐 AR</button>
@@ -76,7 +79,10 @@
             <button class="btn btn-equals" onclick="calculate()">=</button>
         </div>
     </div>
-    <a href="https://engz-to-do-list.vercel.app/" class="floating-btn" target="_blank">To-do List 📒 </a>
+    <div class="eco-quick-bar">
+        <a href="../engz app/index.html" class="floating-btn home-btn"><i class="fa-solid fa-house"></i> إنجز الرئيسية</a>
+        <a href="../to do list/index.html" class="floating-btn task-btn"><i class="fa-solid fa-list-check"></i> قائمة المهام 📝</a>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
