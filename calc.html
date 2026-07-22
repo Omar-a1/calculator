@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Windows Calculator Standard Mode">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="calculator">
+        <!-- Top Bar -->
+        <div class="calc-top-bar">
+            <div class="menu-title">
+                
+                <span class="calc-type" id="calcType">Standard</span>
+            </div>
+            <div class="top-actions">
+                <button class="icon-btn lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Language / الترجمة">🌐 AR</button>
+                <button class="icon-btn theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Theme / المظهر">🌙</button>
+            </div>
+        </div>
+
+        <!-- Display -->
+        <div class="display-container">
+            <input type="text" id="display" disabled value="0" placeholder="0">
+        </div>
+
+        <!-- Memory Bar -->
+        <div class="memory-bar">
+            <button class="mem-btn disabled">MC</button>
+            <button class="mem-btn disabled">MR</button>
+            <button class="mem-btn">M+</button>
+            <button class="mem-btn">M-</button>
+            <button class="mem-btn">MS</button>
+            <button class="mem-btn disabled">M▼</button>
+        </div>
+
+        <!-- Buttons Grid (LTR Layout: Operators on the Right) -->
+        <div class="buttons-grid">
+            <!-- Row 1 -->
+            <button class="btn btn-op" onclick="percentage()">%</button>
+            <button class="btn btn-op" onclick="clearEntry()">CE</button>
+            <button class="btn btn-op" onclick="clearDisplay()">C</button>
+            <button class="btn btn-op" onclick="deleteDigit()">⌫</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-op" onclick="reciprocal()">¹/x</button>
+            <button class="btn btn-op" onclick="square()">x²</button>
+            <button class="btn btn-op" onclick="sqrt()">²√x</button>
+            <button class="btn btn-op" onclick="appendOperator('/')">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-num" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-num" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-num" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-op" onclick="appendOperator('*')">✕</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-num" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-num" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-num" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-op" onclick="appendOperator('-')">-</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-num" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-num" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-num" onclick="appendNumber('3')">3</button>
+            <button class="btn btn-plus" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 6 -->
+            <button class="btn btn-num" onclick="toggleSign()">+/ -</button>
+            <button class="btn btn-num" onclick="appendNumber('0')">0</button>
+            <button class="btn btn-num" onclick="appendNumber('.')">.</button>
+            <button class="btn btn-equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <a href="" class="floating-btn">To-do List 📒 </a>
+    <script src="calc.js"></script>
+</body>
+</html>
