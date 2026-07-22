@@ -19,7 +19,7 @@ let currentLang = localStorage.getItem("calculator-lang") || "en";
 function updateLanguageUI() {
     const calcType = document.getElementById("calcType");
     const langToggle = document.getElementById("langToggle");
-    const t = translations[currentLang];
+    const t = translations[currentLang] || translations.en;
     
     if (calcType) calcType.textContent = t.title;
     if (langToggle) langToggle.textContent = t.langBtn;
